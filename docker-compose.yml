@@ -1,0 +1,25 @@
+version: '3'
+
+
+services:
+    web:
+        depends_on: 
+            - db
+        build: .
+        volumes: 
+            - ./django:/code
+        ports:
+            - "80:8000"
+        command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+
+    db:
+        image: postgres
+        environment:
+            POSTGRES_USER: admin
+            POSTGRES_PASSWORD: mypass
+            POSTGRES_DB: movies
+        volumes:
+            - movies:/var/lib/postgresql/data
+
+volumes:
+    movies:

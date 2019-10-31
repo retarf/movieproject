@@ -4,9 +4,9 @@ from rest_framework import status
 
 from .serializers import TitleSerializer, MovieSerializer
 from .models import Movie
-from .src.api_requests import title_request
-from .src.handlers import keys_to_lower
-from .src.db_requests import save_movie
+from .requests import title_request
+from .handlers import keys_to_lower
+from .queries import save_movie
 
 
 class MovieView(APIView):

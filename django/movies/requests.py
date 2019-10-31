@@ -1,7 +1,7 @@
 import urllib.request
 import json
 
-from .apikey import Apikey
+from .key import Apikey
 from .handlers import title_url
 
 

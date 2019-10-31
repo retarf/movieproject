@@ -58,3 +58,6 @@ class Movie(models.Model):
     production = models.CharField(max_length=200)
     website = models.CharField(max_length=500)
     response = models.CharField(max_length=10)
+
+    def __str__(self):
+        return self.title

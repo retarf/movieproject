@@ -7,6 +7,7 @@ from .models import Movie
 from .requests import title_request
 from .handlers import keys_to_lower
 from .queries import save_movie
+from rest_framework import status
 
 
 class MovieView(APIView):
@@ -21,7 +22,7 @@ class MovieView(APIView):
         else:
             return Response(title_serializer.errors)
             
-        return Response(movie_serializer.data)
+        return Response(movie_serializer.data, status=status.HTTP_201_CREATED)
 
     def get(self, request, format=None):
         movies = Movie.objects.all()

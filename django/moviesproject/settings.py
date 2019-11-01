@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'movies',
     'comments',
+    'top',
 ]
 
 MIDDLEWARE = [

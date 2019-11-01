@@ -4,15 +4,15 @@ Application get movies from http://www.omdbapi.com/ and save it in local databas
 
 POST /movies   -- add movie to local database
                     Parameters: title
-                    Example: curl localhost/movies -H 'Content-Type: application/json' -d '{"title": "Batman"}'
+                    Example: curl localhost/movies/ -H 'Content-Type: application/json' -d '{"title": "Batman"}'
 GET /movies     -- display movies list from local database
 POST /comments -- add comment to movie
                     Parameters: movie_id, content
-                    Example: curl localhost/comments -H 'Content-Type: application/json' -d '{"movie_id": 1, "content": "my comment"}'
+                    Example: curl localhost/comments/ -H 'Content-Type: application/json' -d '{"movie_id": 1, "content": "my comment"}'
 GET /comments  -- display comments list
 GET /top       -- display top list of movies base on comments number. 
                     Parameters: start_date, end_date (format: YYYY-MM-DD)
-                    Example: curl localhost/comments?start_date=2019-10-31&end_date=2019-11-1
+                    Example: curl localhost/comments/?start_date=2019-10-31&end_date=2019-11-1
 
 Requirements:
 - django==2,<3.0

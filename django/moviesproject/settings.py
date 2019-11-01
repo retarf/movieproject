@@ -77,16 +77,11 @@ WSGI_APPLICATION = 'moviesproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'movies',
-        'USER': 'admin',
-        'PASSWORD': 'mypass',
-        'HOST': 'db',
-        'PORT': '5432',
-    }
-}
+#import heroku_db
+from .container_db import data
+
+#DATABASES = .heroku_db.DATABASES
+DATABASES = data.Database
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators

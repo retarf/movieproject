@@ -5,7 +5,7 @@ from .models import Comment
 from .serializers import CommentSerializer
 
 
-class CommentView(generics.ListCreateAPIView, mixins.ListModelMixin):
+class CommentView(generics.ListCreateAPIView):
     serializer_class = CommentSerializer
 
     def get_queryset(self):

@@ -10,6 +10,7 @@ class MovieTestCase(APITestCase):
         response = self.client.get(url)
         self.assertTrue(status.is_success(response.status_code))
 
-
-if __name__ == '__main__':
-    unittest.main()
+    def test_post_request(self):
+        url = reverse('movies:index')
+        response = self.client.post(url, {'title': 'new idea'}, format='json')
+        self.assertTrue(status.is_success(response.status_code))

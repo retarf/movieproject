@@ -1,1 +1,1 @@
-web: docker-compose up
+web: python manage.py runserver

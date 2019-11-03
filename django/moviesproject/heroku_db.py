@@ -24,3 +24,6 @@ URI
 Heroku CLI
     heroku pg:psql postgresql-tapered-59631 --app ldmovieproject
 '''
+
+class data:
+    Database = DATABASES

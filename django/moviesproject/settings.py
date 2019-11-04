@@ -78,7 +78,8 @@ WSGI_APPLICATION = 'moviesproject.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 #import heroku_db
-from .container_db import data
+#from .container_db import data
+from .heroku_db import data
 
 #DATABASES = .heroku_db.DATABASES
 DATABASES = data.Database

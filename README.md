@@ -3,7 +3,7 @@
 Application get movies from http://www.omdbapi.com/ and save it in local database.
 
 POST /movies   -- add movie to local database
-                    Parameters: title
+                    Parameters: title               
                     Example: curl localhost/movies/ -H 'Content-Type: application/json' -d '{"title": "Batman"}'
 GET /movies     -- display movies list from local database
 POST /comments -- add comment to movie
